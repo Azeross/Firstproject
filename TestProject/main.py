@@ -11,3 +11,4 @@ elif cafe == mak:
     print('mak', random.choice(mak))
 elif cafe == kfc:
     print('kfc', random.choice(kfc))
+    else
