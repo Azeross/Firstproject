@@ -1,16 +1,13 @@
-# This is a sample Python script.
+import random
+bk = ['abaya', 'baitur','temer','moskva']
+mak = ['abaya1', 'baitur1','temer1','moskva1']
+kfc = ['abaya2', 'baitur2','temer2','moskva2']
+list = [kfc, bk, mak]
+cafe = random.choice(list)
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if cafe == bk:
+    print('bk', random.choice(bk))
+elif cafe == mak:
+    print('mak', random.choice(mak))
+elif cafe == kfc:
+    print('kfc', random.choice(kfc))
