@@ -1,3 +1,5 @@
+import time
+
 from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QApplication, QMainWindow
 import sys
@@ -9,6 +11,8 @@ class Window(QMainWindow):
         super(Window, self).__init__()
         self.setGeometry(500, 200, 500, 500)
         self.setWindowTitle("Выбор еды")
+        self.bg = QtWidgets.QProgressBar(self)
+        self.bg.move(200, 100)
         self.main_text2 = QtWidgets.QLabel(self)
         self.main_text1 = QtWidgets.QLabel(self)
         self.main_text1.move(200, 150)
@@ -27,12 +31,14 @@ class Window(QMainWindow):
         cafe = random.choice(lists)
         for name, value in list(locals().items()):
             if cafe is value:
+                for i in range(101):
+                    time.sleep(0.05)
+                    self.bg.setValue(i)
                 values = random.choice(cafe)
                 self.main_text1.setText("Заведение: " + name)
                 self.main_text2.setText("Адресс: " + values)
                 self.main_text1.adjustSize()
                 self.main_text2.adjustSize()
-                #print(name, random.choice(cafe))
                 break
 
 
